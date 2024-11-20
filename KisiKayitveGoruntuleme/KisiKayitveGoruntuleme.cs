@@ -23,7 +23,18 @@ namespace KisiKayitveGoruntuleme
             string yol = "C://Kişiler";
             DirectoryInfo di = new DirectoryInfo(yol);
             di.Create();
-
+            string kisiyol = "C://Kişiler";
+            DirectoryInfo di2 = new DirectoryInfo(kisiyol);
+            List<string> kisiliste = new List<string>();
+            FileInfo[] dosyalar = di2.GetFiles();
+            foreach (FileInfo item in dosyalar)
+            {
+                kisiliste.Add(item.Name);
+            }
+            foreach (string item in kisiliste)
+            {
+                lb_kisiler.Items.Add(item.Remove(item.Length-4,4));
+            }
         }
 
         private void btn_kaydet_Click(object sender, EventArgs e)
@@ -44,13 +55,42 @@ namespace KisiKayitveGoruntuleme
             string yoltxt = "C://Kişiler//" + k.kimlikNo + ".txt";
             FileInfo fi = new FileInfo(yoltxt);
 
-            
-
             StreamWriter sw = new StreamWriter(yoltxt);
-            string metin = $"İSİM: {k.isim}\nSOYİSİM: {k.soyisim}\nKİMLİK NO: {k.kimlikNo}\nDOĞUM TARİHİ: {k.dogumTarihi}\nTELEFON NO: {k.telefonNo}\nCİNSİYET: {k.cinsiyet}\nMEDENİ DURUM: {k.medeniHal}\nADRES: {k.adres}";
+            string metin = $"İSİM: {k.isim}\nSOYİSİM: {k.soyisim}\nKİMLİK NO: {k.kimlikNo}\nDOĞUM TARİHİ: {k.dogumTarihi.ToShortDateString()}\nTELEFON NO: {k.telefonNo}\nCİNSİYET: {k.cinsiyet}\nMEDENİ DURUM: {k.medeniHal}\nADRES: {k.adres}";
             sw.WriteLine(metin);
             sw.Close();
 
+        }
+
+        private void lb_kisiler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string yol = "C://Kişiler";
+            DirectoryInfo di = new DirectoryInfo(yol);
+            List<string> kisiliste = new List<string>();
+            FileInfo[] dosyalar = di.GetFiles();
+            foreach (FileInfo fi in dosyalar)
+            {
+                kisiliste.Add(fi.Name);
+            }
+            string kisiyol = "C://Kişiler//" + kisiliste[lb_kisiler.SelectedIndex];
+            StreamReader sr = new StreamReader(kisiyol);
+            tb_kisiBilgiEkran.Text = sr.ReadToEnd();
+        }
+
+        private void btn_kisiBilgiGetir_Click(object sender, EventArgs e)
+        {
+            string kisiyol = "C://Kişiler";
+            DirectoryInfo di2 = new DirectoryInfo(kisiyol);
+            List<string> kisiliste = new List<string>();
+            FileInfo[] dosyalar = di2.GetFiles();
+            foreach (FileInfo item in dosyalar)
+            {
+                kisiliste.Add(item.Name);
+            }
+            foreach (string item in kisiliste)
+            {
+                lb_kisiler.Items.Add(item.Remove(item.Length - 4, 4));
+            }
         }
     }
 }

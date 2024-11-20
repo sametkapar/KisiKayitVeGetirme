@@ -8,3 +8,13 @@ C:\Users\KAPAR\source\repos\KisiKayitveGoruntuleme\KisiKayitveGoruntuleme\bin\De
 C:\Users\KAPAR\source\repos\KisiKayitveGoruntuleme\KisiKayitveGoruntuleme\bin\Debug\KisiKayitveGoruntuleme.pdb
 C:\Users\KAPAR\source\repos\KisiKayitveGoruntuleme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.exe
 C:\Users\KAPAR\source\repos\KisiKayitveGoruntuleme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.pdb
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\bin\Debug\KisiKayitveGoruntuleme.exe.config
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\bin\Debug\KisiKayitveGoruntuleme.exe
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\bin\Debug\KisiKayitveGoruntuleme.pdb
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.csproj.AssemblyReference.cache
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.KisiKayitveGoruntuleme.resources
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.Properties.Resources.resources
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.csproj.GenerateResource.cache
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.csproj.CoreCompileInputs.cache
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.exe
+C:\Users\KAPAR\Documents\GitHub\KisiKayitVeGetirme\KisiKayitveGoruntuleme\obj\Debug\KisiKayitveGoruntuleme.pdb

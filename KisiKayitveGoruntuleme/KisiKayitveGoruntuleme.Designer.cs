@@ -34,26 +34,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mtb_telefon = new System.Windows.Forms.MaskedTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rb_kadin = new System.Windows.Forms.RadioButton();
+            this.rb_erkek = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rb_bekar = new System.Windows.Forms.RadioButton();
             this.rb_evli = new System.Windows.Forms.RadioButton();
             this.dtp_dogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.tb_kimlikNo = new System.Windows.Forms.TextBox();
+            this.tb_isim = new System.Windows.Forms.TextBox();
             this.tb_soyisim = new System.Windows.Forms.TextBox();
             this.tb_adres = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rb_kadin = new System.Windows.Forms.RadioButton();
-            this.rb_erkek = new System.Windows.Forms.RadioButton();
-            this.tb_isim = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.btn_kaydet = new System.Windows.Forms.Button();
-            this.mtb_telefon = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_kisiBilgiEkran = new System.Windows.Forms.TextBox();
+            this.btn_kisiBilgiGetir = new System.Windows.Forms.Button();
+            this.lb_kisiler = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -132,6 +137,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bilgiler";
             // 
+            // mtb_telefon
+            // 
+            this.mtb_telefon.Location = new System.Drawing.Point(130, 196);
+            this.mtb_telefon.Mask = "(999) 000-0000";
+            this.mtb_telefon.Name = "mtb_telefon";
+            this.mtb_telefon.Size = new System.Drawing.Size(275, 27);
+            this.mtb_telefon.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rb_kadin);
+            this.panel2.Controls.Add(this.rb_erkek);
+            this.panel2.Location = new System.Drawing.Point(131, 235);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(275, 32);
+            this.panel2.TabIndex = 6;
+            // 
+            // rb_kadin
+            // 
+            this.rb_kadin.AutoSize = true;
+            this.rb_kadin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rb_kadin.Location = new System.Drawing.Point(118, 1);
+            this.rb_kadin.Name = "rb_kadin";
+            this.rb_kadin.Size = new System.Drawing.Size(66, 22);
+            this.rb_kadin.TabIndex = 7;
+            this.rb_kadin.TabStop = true;
+            this.rb_kadin.Text = "Kadın";
+            this.rb_kadin.UseVisualStyleBackColor = true;
+            // 
+            // rb_erkek
+            // 
+            this.rb_erkek.AutoSize = true;
+            this.rb_erkek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rb_erkek.Location = new System.Drawing.Point(3, 3);
+            this.rb_erkek.Name = "rb_erkek";
+            this.rb_erkek.Size = new System.Drawing.Size(68, 22);
+            this.rb_erkek.TabIndex = 6;
+            this.rb_erkek.TabStop = true;
+            this.rb_erkek.Text = "Erkek";
+            this.rb_erkek.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rb_bekar);
@@ -182,6 +228,14 @@
             this.tb_kimlikNo.Size = new System.Drawing.Size(275, 27);
             this.tb_kimlikNo.TabIndex = 3;
             // 
+            // tb_isim
+            // 
+            this.tb_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tb_isim.Location = new System.Drawing.Point(131, 37);
+            this.tb_isim.Name = "tb_isim";
+            this.tb_isim.Size = new System.Drawing.Size(275, 27);
+            this.tb_isim.TabIndex = 1;
+            // 
             // tb_soyisim
             // 
             this.tb_soyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -198,6 +252,16 @@
             this.tb_adres.Name = "tb_adres";
             this.tb_adres.Size = new System.Drawing.Size(275, 140);
             this.tb_adres.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(30, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Telefon No:";
             // 
             // label8
             // 
@@ -229,57 +293,6 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Cinsiyet:";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rb_kadin);
-            this.panel2.Controls.Add(this.rb_erkek);
-            this.panel2.Location = new System.Drawing.Point(131, 235);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 32);
-            this.panel2.TabIndex = 6;
-            // 
-            // rb_kadin
-            // 
-            this.rb_kadin.AutoSize = true;
-            this.rb_kadin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rb_kadin.Location = new System.Drawing.Point(118, 1);
-            this.rb_kadin.Name = "rb_kadin";
-            this.rb_kadin.Size = new System.Drawing.Size(66, 22);
-            this.rb_kadin.TabIndex = 7;
-            this.rb_kadin.TabStop = true;
-            this.rb_kadin.Text = "Kadın";
-            this.rb_kadin.UseVisualStyleBackColor = true;
-            // 
-            // rb_erkek
-            // 
-            this.rb_erkek.AutoSize = true;
-            this.rb_erkek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rb_erkek.Location = new System.Drawing.Point(3, 3);
-            this.rb_erkek.Name = "rb_erkek";
-            this.rb_erkek.Size = new System.Drawing.Size(68, 22);
-            this.rb_erkek.TabIndex = 6;
-            this.rb_erkek.TabStop = true;
-            this.rb_erkek.Text = "Erkek";
-            this.rb_erkek.UseVisualStyleBackColor = true;
-            // 
-            // tb_isim
-            // 
-            this.tb_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tb_isim.Location = new System.Drawing.Point(131, 37);
-            this.tb_isim.Name = "tb_isim";
-            this.tb_isim.Size = new System.Drawing.Size(275, 27);
-            this.tb_isim.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(30, 196);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Telefon No:";
-            // 
             // btn_kaydet
             // 
             this.btn_kaydet.Location = new System.Drawing.Point(147, 547);
@@ -290,19 +303,53 @@
             this.btn_kaydet.UseVisualStyleBackColor = true;
             this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
             // 
-            // mtb_telefon
+            // groupBox2
             // 
-            this.mtb_telefon.Location = new System.Drawing.Point(130, 196);
-            this.mtb_telefon.Mask = "(999) 000-0000";
-            this.mtb_telefon.Name = "mtb_telefon";
-            this.mtb_telefon.Size = new System.Drawing.Size(275, 27);
-            this.mtb_telefon.TabIndex = 5;
+            this.groupBox2.Controls.Add(this.tb_kisiBilgiEkran);
+            this.groupBox2.Controls.Add(this.btn_kisiBilgiGetir);
+            this.groupBox2.Controls.Add(this.lb_kisiler);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.Location = new System.Drawing.Point(448, 61);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(421, 467);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Kişi Listesi";
+            // 
+            // tb_kisiBilgiEkran
+            // 
+            this.tb_kisiBilgiEkran.Location = new System.Drawing.Point(21, 273);
+            this.tb_kisiBilgiEkran.Multiline = true;
+            this.tb_kisiBilgiEkran.Name = "tb_kisiBilgiEkran";
+            this.tb_kisiBilgiEkran.Size = new System.Drawing.Size(381, 178);
+            this.tb_kisiBilgiEkran.TabIndex = 2;
+            // 
+            // btn_kisiBilgiGetir
+            // 
+            this.btn_kisiBilgiGetir.Location = new System.Drawing.Point(21, 191);
+            this.btn_kisiBilgiGetir.Name = "btn_kisiBilgiGetir";
+            this.btn_kisiBilgiGetir.Size = new System.Drawing.Size(100, 61);
+            this.btn_kisiBilgiGetir.TabIndex = 1;
+            this.btn_kisiBilgiGetir.Text = "REFRESH Çalışmıyor";
+            this.btn_kisiBilgiGetir.UseVisualStyleBackColor = true;
+            this.btn_kisiBilgiGetir.Click += new System.EventHandler(this.btn_kisiBilgiGetir_Click);
+            // 
+            // lb_kisiler
+            // 
+            this.lb_kisiler.FormattingEnabled = true;
+            this.lb_kisiler.ItemHeight = 20;
+            this.lb_kisiler.Location = new System.Drawing.Point(21, 26);
+            this.lb_kisiler.Name = "lb_kisiler";
+            this.lb_kisiler.Size = new System.Drawing.Size(381, 144);
+            this.lb_kisiler.TabIndex = 0;
+            this.lb_kisiler.SelectedIndexChanged += new System.EventHandler(this.lb_kisiler_SelectedIndexChanged);
             // 
             // KisiKayitveGoruntuleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 630);
+            this.ClientSize = new System.Drawing.Size(889, 630);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_kaydet);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -310,10 +357,12 @@
             this.Text = "KisiKayitveGoruntuleme";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,5 +393,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_kaydet;
         private System.Windows.Forms.MaskedTextBox mtb_telefon;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tb_kisiBilgiEkran;
+        private System.Windows.Forms.Button btn_kisiBilgiGetir;
+        private System.Windows.Forms.ListBox lb_kisiler;
     }
 }

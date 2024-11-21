@@ -52,7 +52,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_kaydet = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tb_kisiBilgiEkran = new System.Windows.Forms.TextBox();
+            this.lbl_kisibilgiekran = new System.Windows.Forms.Label();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_kisiBilgiGetir = new System.Windows.Forms.Button();
             this.lb_kisiler = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
@@ -305,7 +306,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tb_kisiBilgiEkran);
+            this.groupBox2.Controls.Add(this.lbl_kisibilgiekran);
+            this.groupBox2.Controls.Add(this.btn_delete);
             this.groupBox2.Controls.Add(this.btn_kisiBilgiGetir);
             this.groupBox2.Controls.Add(this.lb_kisiler);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -316,13 +318,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kişi Listesi";
             // 
-            // tb_kisiBilgiEkran
+            // lbl_kisibilgiekran
             // 
-            this.tb_kisiBilgiEkran.Location = new System.Drawing.Point(21, 273);
-            this.tb_kisiBilgiEkran.Multiline = true;
-            this.tb_kisiBilgiEkran.Name = "tb_kisiBilgiEkran";
-            this.tb_kisiBilgiEkran.Size = new System.Drawing.Size(381, 178);
-            this.tb_kisiBilgiEkran.TabIndex = 2;
+            this.lbl_kisibilgiekran.AutoSize = true;
+            this.lbl_kisibilgiekran.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_kisibilgiekran.Location = new System.Drawing.Point(18, 290);
+            this.lbl_kisibilgiekran.Name = "lbl_kisibilgiekran";
+            this.lbl_kisibilgiekran.Size = new System.Drawing.Size(0, 16);
+            this.lbl_kisibilgiekran.TabIndex = 13;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(298, 191);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(104, 60);
+            this.btn_delete.TabIndex = 3;
+            this.btn_delete.Text = "DELETE çalışmıyor";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_kisiBilgiGetir
             // 
@@ -330,7 +343,7 @@
             this.btn_kisiBilgiGetir.Name = "btn_kisiBilgiGetir";
             this.btn_kisiBilgiGetir.Size = new System.Drawing.Size(100, 61);
             this.btn_kisiBilgiGetir.TabIndex = 1;
-            this.btn_kisiBilgiGetir.Text = "REFRESH Çalışmıyor";
+            this.btn_kisiBilgiGetir.Text = "REFRESH";
             this.btn_kisiBilgiGetir.UseVisualStyleBackColor = true;
             this.btn_kisiBilgiGetir.Click += new System.EventHandler(this.btn_kisiBilgiGetir_Click);
             // 
@@ -394,8 +407,9 @@
         private System.Windows.Forms.Button btn_kaydet;
         private System.Windows.Forms.MaskedTextBox mtb_telefon;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox tb_kisiBilgiEkran;
         private System.Windows.Forms.Button btn_kisiBilgiGetir;
         private System.Windows.Forms.ListBox lb_kisiler;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Label lbl_kisibilgiekran;
     }
 }

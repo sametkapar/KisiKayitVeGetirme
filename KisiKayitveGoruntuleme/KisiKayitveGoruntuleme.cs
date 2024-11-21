@@ -33,7 +33,7 @@ namespace KisiKayitveGoruntuleme
             }
             foreach (string item in kisiliste)
             {
-                lb_kisiler.Items.Add(item.Remove(item.Length-4,4));
+                lb_kisiler.Items.Add(item.Remove(item.Length - 4, 4));
             }
         }
 
@@ -51,17 +51,21 @@ namespace KisiKayitveGoruntuleme
             if (rb_evli.Checked) { k.medeniHal = "Bekar"; }
             k.adres = tb_adres.Text;
 
+            if (tb_isim.Text != "")
+            {
+                string yoltxt = "C://Kişiler//" + k.kimlikNo + ".txt";
+                FileInfo fi = new FileInfo(yoltxt);
 
-            string yoltxt = "C://Kişiler//" + k.kimlikNo + ".txt";
-            FileInfo fi = new FileInfo(yoltxt);
-
-            StreamWriter sw = new StreamWriter(yoltxt);
-            string metin = $"İSİM: {k.isim}\nSOYİSİM: {k.soyisim}\nKİMLİK NO: {k.kimlikNo}\nDOĞUM TARİHİ: {k.dogumTarihi.ToShortDateString()}\nTELEFON NO: {k.telefonNo}\nCİNSİYET: {k.cinsiyet}\nMEDENİ DURUM: {k.medeniHal}\nADRES: {k.adres}";
-            sw.WriteLine(metin);
-            sw.Close();
-
+                StreamWriter sw = new StreamWriter(yoltxt);
+                string metin = $"İSİM: {k.isim}\nSOYİSİM: {k.soyisim}\nKİMLİK NO: {k.kimlikNo}\nDOĞUM TARİHİ: {k.dogumTarihi.ToShortDateString()}\nTELEFON NO: {k.telefonNo}\nCİNSİYET: {k.cinsiyet}\nMEDENİ DURUM: {k.medeniHal}\nADRES: {k.adres}";
+                sw.WriteLine(metin);
+                sw.Close();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Tüm alanları doldurunuz", "HATA");
+            }
         }
-
         private void lb_kisiler_SelectedIndexChanged(object sender, EventArgs e)
         {
             string yol = "C://Kişiler";
@@ -74,15 +78,15 @@ namespace KisiKayitveGoruntuleme
             }
             string kisiyol = "C://Kişiler//" + kisiliste[lb_kisiler.SelectedIndex];
             StreamReader sr = new StreamReader(kisiyol);
-            tb_kisiBilgiEkran.Text = sr.ReadToEnd();
+            lbl_kisibilgiekran.Text = sr.ReadToEnd();
         }
-
         private void btn_kisiBilgiGetir_Click(object sender, EventArgs e)
         {
             string kisiyol = "C://Kişiler";
             DirectoryInfo di2 = new DirectoryInfo(kisiyol);
             List<string> kisiliste = new List<string>();
             FileInfo[] dosyalar = di2.GetFiles();
+            lb_kisiler.Items.Clear();
             foreach (FileInfo item in dosyalar)
             {
                 kisiliste.Add(item.Name);
@@ -91,6 +95,12 @@ namespace KisiKayitveGoruntuleme
             {
                 lb_kisiler.Items.Add(item.Remove(item.Length - 4, 4));
             }
+        }
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            string kisiyol = "C://Kişiler//" + lb_kisiler.SelectedItem.ToString() + ".txt";
+            FileInfo fi2 = new FileInfo(kisiyol);
+            fi2.Delete();
         }
     }
 }
